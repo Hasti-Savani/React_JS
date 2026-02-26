@@ -13,9 +13,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -24,6 +26,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -43,3 +46,29 @@
   color: #888;
 }
 
+.margin {
+  margin-top: 90px;
+  display: flex;
+}
+
+.title {
+  display: flex;
+  margin-top: 70px;
+  margin-left: 29px;
+  font-weight: 600;
+  font-size: xx-large;
+}
+
+.para {
+  display: flex;
+  margin-top: 20px;
+  font-weight: 200;
+  font-family: sans-serif;
+  line-height: 1.8;
+  margin-left: 29px;
+  font-size: 20px;
+}
+
+.ul {
+  list-style-type: square;
+}

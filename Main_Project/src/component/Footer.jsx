@@ -1,8 +1,7 @@
 import React from "react"
 import img from "../assets/logo-white2.png"
+import { FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 
-
-{/* Footer */ }
 const Footer = () => {
   return (
     <>
@@ -96,8 +95,6 @@ const Footer = () => {
         <div className="text-gray-400 border-t mt-20"></div>
         <div className="bg-white ">
           <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center">
-
-
             <div className="flex items-center space-x-3">
               <div className="p-3 rounded-xl">
                 <img className="h-10" src={img} alt="" />
@@ -138,10 +135,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
       </footer>
     </>
-
   )
 }
 export default Footer;
