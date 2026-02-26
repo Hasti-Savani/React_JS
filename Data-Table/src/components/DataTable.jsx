@@ -9,7 +9,7 @@ const DataTable = ({ data, onDelete }) => {
   );
 
   return (
-    <div className="justify-center items-center mx-auto bg-white shadow-lg rounded-lg p-6">
+    <div className="border-collapse border border-white mx-auto bg-white shadow-lg rounded-lg p-6">
       <h2 className="text-2xl font-bold mb-6 text-center text-gray-700">
         React Data Table
       </h2>
@@ -27,12 +27,12 @@ const DataTable = ({ data, onDelete }) => {
       <div className="overflow-x-auto">
         <table className="border border-gray-200">
           <thead>
-            <tr className="bg-gray-200 text-gray-700">
-              <th className="p-3 border">ID</th>
-              <th className="p-3 border">Name</th>
-              <th className="p-3 border">Email</th>
-              <th className="p-3 border">Role</th>
-              <th className="p-3 border">Action</th>
+            <tr className="border border-white-800 text-gray-700">
+              <th className="border border-white p-3 border">ID</th>
+              <th className="border border-gray-300 p-3 border">Name</th>
+              <th className="border border-gray-300 p-3 border">Email</th>
+              <th className="border border-gray-300 p-3 border">Role</th>
+              <th className="border border-gray-300 p-3 border">Action</th>
             </tr>
           </thead>
 
