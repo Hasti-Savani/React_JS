@@ -25,7 +25,7 @@ const LifeStyle = () => {
                         <img className="h-10" src={img} alt="" />
                     </div>
 
-                    <div className="text-gray-400 flex gap-10 mx-20">
+                    <div className="text-gray-400 flex gap-10 text-sm mx-20">
                         <a className="hover:text-blue-600" href="#">Contact Us</a>
                         <a className="hover:text-blue-600" href="#">Terms of Use</a>
                         <a className="hover:text-blue-600" href="#">AdChoices</a>
