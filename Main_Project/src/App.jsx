@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
-import PrivacyPolicy from "./component/PrivacyPolicy";
+import PostList from "./component/PostList";
+
+
 
 function App() {
   return (
     <>
-      
-<PrivacyPolicy/>
+     <PostList/>
     </>
   );
 };

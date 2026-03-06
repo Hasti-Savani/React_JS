@@ -1,4 +1,8 @@
-  {/* Hero Section */}
+import React from 'react'
+
+const Home = () => {
+  return (
+      {/* Hero Section */}
   <section className="relative bg-gradient-to-r from-cyan-300 to-pink-300 h-[400px] flex items-center justify-center">
   <div className="bg-white p-8 rounded-xl shadow-lg w-[400px]">
     <p className="text-sm text-red-500 font-semibold mb-2">
@@ -12,3 +16,7 @@
     </button>
   </div>
 </section>
+  )
+}
+
+export default Home

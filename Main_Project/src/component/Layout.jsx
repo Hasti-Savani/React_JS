@@ -8,11 +8,11 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Navbar />,
-    };
+    },
 {
-    path: "/post"
-    element: <Post />,
-    };
+    path: "/post",
+    element: <Post />
+    },
 
 ]);
 

@@ -1,16 +1,18 @@
 import React from 'react'
 import Navbar from './Navbar';
-import Footer2 from './Footer2';
+import FooterD from './FooterD';
+
 
 const PrivacyPolicy = () => {
   return (
     <>
-    <Navbar />
-      <div className="container font-sans">
-        <h4 className="font-semibold text-xl inline-block margin mx-7">This Privacy policy was published on April 26th, 2018.</h4>
+      <Navbar />
+      <div className='container mx-auto'>
+      <div className="container mx-auto font-sans">
+        <h4 className="font-semibold text-2xl inline-block margin mx-7">This Privacy policy was published on April 26th, 2018.</h4>
       </div>
       <div className="container">
-        <div className="border border-t-2 my-4 text-blue-600"></div>
+        <div className="border border-t-2 my-4 text-blue-600 w-[580px] mx-7"></div>
         <h3 className="title">GDPR compliance</h3>
         <p className="para">Sed nec ex vitae justo molestie maximus. Sed ut neque sit amet libero rhoncus tempor. Fusce tempor quam libero, varius congue magna tempus vitae. Donec a justo nec elit sagittis sagittis eu a ante. Vivamus rutrum elit odio. Donec gravida id ligula ut faucibus. Aenean convallis ligula orci, ut congue nunc sodales ut. In ultrices elit malesuada velit ornare, eget dictum velit hendrerit. Praesent bibendum blandit lectus, eu congue neque mollis in. Pellentesque metus diam, hendrerit in purus fringilla, accumsan bibendum sapien. Nunc non facilisis sem.</p>
         <h3 className="title">About Blogar</h3>
@@ -49,7 +51,9 @@ const PrivacyPolicy = () => {
         <h3 className="title">Changes to this Privacy Policy</h3>
         <p className="para">Integer eu ornare lectus, ornare ullamcorper tellus. Morbi in urna a justo dignissim luctus. Nam sagittis ante ut lorem feugiat, sed consectetur ligula lacinia. Vestibulum quis mauris sed lectus pretium dictum sed vitae orci. Vestibulum facilisis facilisis mauris non maximus. Nam tristique ipsum egestas, suscipit orci sit amet, rutrum ante. Proin in felis pellentesque, ullamcorper enim vel, molestie ipsum.</p>
       </div>
-     <Footer2/>
+      </div>
+      
+      <FooterD />
     </>
   )
 }

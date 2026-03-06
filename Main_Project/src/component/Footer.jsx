@@ -105,19 +105,19 @@ const Footer = () => {
               <span className="text-lg font-medium">Follow Us</span>
 
               <div className="flex space-x-3">
-                <div className="bg-gray-200 p-3 rounded-full hover:bg-gray-300 cursor-pointer">
+                <div className="bg-gray-200 p-3 rounded-full hover:bg-blue-600 hover:text-white cursor-pointer">
                   <FaFacebookF />
                 </div>
 
-                <div className="bg-gray-200 p-3 rounded-full hover:bg-gray-300 cursor-pointer">
+                <div className="bg-gray-200 p-3 rounded-full hover:bg-blue-600 hover:text-white cursor-pointer">
                   <FaInstagram />
                 </div>
 
-                <div className="bg-gray-200 p-3 rounded-full hover:bg-gray-300 cursor-pointer">
+                <div className="bg-gray-200 p-3 rounded-full hover:bg-blue-600 hover:text-white cursor-pointer">
                   <FaXTwitter />
                 </div>
 
-                <div className="bg-gray-200 p-3 rounded-full hover:bg-gray-300 cursor-pointer">
+                <div className="bg-gray-200 p-3 rounded-full hover:bg-blue-600 hover:text-white cursor-pointer">
                   <FaLinkedinIn />
                 </div>
               </div>
