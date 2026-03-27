@@ -1,9 +1,9 @@
 import React from "react";
-import DataTable from "./components/DataTable";
+import UserTable from "./components/UserTable";
 import './App.css'
 
 function App() {
-  return <DataTable />;
+  return <UserTable />;
 }
 
 export default App;
