@@ -1,49 +1,51 @@
 import { useState } from "react";
-import { auth } from "../firebase/firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { auth } from "../firebase/config";
+import { useNavigate, Link } from "react-router-dom";
 
-const Login = () => {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    await signInWithEmailAndPassword(auth, email, password);
-    navigate("/dashboard");
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/dashboard");
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-200">
-      <form
-        onSubmit={handleLogin}
-        className="bg-white p-6 rounded shadow w-80"
-      >
-        <h2 className="text-xl font-bold mb-4 text-center">Login</h2>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <form className="bg-white p-8 rounded-xl shadow w-96" onSubmit={handleLogin}>
+        <h2 className="text-2xl font-bold mb-5 text-center">Login</h2>
 
         <input
           type="email"
           placeholder="Email"
-          className="border p-2 w-full mb-3"
+          className="w-full p-2 mb-4 border rounded"
           onChange={(e) => setEmail(e.target.value)}
-          required
         />
 
         <input
           type="password"
           placeholder="Password"
-          className="border p-2 w-full mb-3"
+          className="w-full p-2 mb-4 border rounded"
           onChange={(e) => setPassword(e.target.value)}
-          required
         />
 
-        <button className="bg-green-500 text-white w-full py-2 rounded">
+        <button className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
           Login
         </button>
+
+        <p className="text-sm mt-3 text-center">
+          Don't have account?{" "}
+          <Link to="/signup" className="text-blue-500">Signup</Link>
+        </p>
       </form>
     </div>
   );
-};
-
-export default Login;
+}

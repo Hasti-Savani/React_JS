@@ -1,49 +1,51 @@
 import { useState } from "react";
-import { auth } from "../firebase/firebaseConfig";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
+import { auth } from "../firebase/config";
+import { useNavigate, Link } from "react-router-dom";
 
-const Signup = () => {
+export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    await createUserWithEmailAndPassword(auth, email, password);
-    navigate("/");
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      navigate("/");
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-200">
-      <form
-        onSubmit={handleSignup}
-        className="bg-white p-6 rounded shadow w-80"
-      >
-        <h2 className="text-xl font-bold mb-4 text-center">Signup</h2>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <form className="bg-white p-8 rounded-xl shadow w-96" onSubmit={handleSignup}>
+        <h2 className="text-2xl font-bold mb-5 text-center">Signup</h2>
 
         <input
           type="email"
           placeholder="Email"
-          className="border p-2 w-full mb-3"
+          className="w-full p-2 mb-4 border rounded"
           onChange={(e) => setEmail(e.target.value)}
-          required
         />
 
         <input
           type="password"
           placeholder="Password"
-          className="border p-2 w-full mb-3"
+          className="w-full p-2 mb-4 border rounded"
           onChange={(e) => setPassword(e.target.value)}
-          required
         />
 
-        <button className="bg-blue-500 text-white w-full py-2 rounded">
+        <button className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600">
           Signup
         </button>
+
+        <p className="text-sm mt-3 text-center">
+          Already have account?{" "}
+          <Link to="/" className="text-blue-500">Login</Link>
+        </p>
       </form>
     </div>
   );
-};
-
-export default Signup;
+}
